@@ -5,27 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Сайт компании Smart Device</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <header>
-    <a>
-      <img src="http://placehold.it/52x52" width="52" height="52"
-      alt="Логотип Smart Device">
-      Smart Device
-      умные технологии
-    </a>
-    <a href="mailto:info@sd.ru">info@sd.ru</a>
-    <a href="tel:+74950005252">+7 (495) 000 52 52</a>
-    <button type="button">Заказать звонок</button>
-    <h1>Печатные платы</h1>
-    <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-    <!-- Якорные ссылки, плавно пролистывающие страницу до блока преимуществ и формы в подвале соответственно -->
-    <a href="#">Получить бесплатную консультацию</a>
-    <a href="#">Скролл вниз</a>
+  <header class="header">
+    <div class="header__wrap">
+      <a class="header__logo">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+          <img src="img/logo-desktop.svg" width="202" height="52" alt="Логотип Smart Device">
+        </picture>
+      </a>
+      <div class="header__contacts">
+        <ul class="contacts">
+          <li class="contacts__item">
+            <a class="contacts__mail" href="mailto:info@sd.ru">info@sd.ru</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__tel" href="tel:+7(495)0005252">+7 (495) 000 52 52</a>
+          </li>
+        </ul>
+        <button class="contacts__btn" type="button" aria-label="Заказать звонок">Заказать звонок</button>
+      </div>
+    </div>
+    <div class="header__promo promo">
+      <h2 class="promo__title">Печатные платы</h2>
+      <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <!-- Якорные ссылки, плавно пролистывающие страницу до блока преимуществ и формы в подвале соответственно -->
+      <a class="promo__button" href="#">Получить бесплатную консультацию</a>
+      <a class="promo__link" href="#">Скролл вниз</a>
+    </div>
   </header>
+  <main></main>
+  <footer></footer>
 </body>
 
 </html>
