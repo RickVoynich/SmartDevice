@@ -1,4 +1,10 @@
-@import "../sass/fonts.sass";
+@import "./blocks/fonts.scss";
+@import "./blocks/global.scss";
+@import "./blocks/header.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/promo.scss";
+
+
 // временно для наглядного построения сеток
 div,
 section,
