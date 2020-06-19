@@ -1,0 +1,31 @@
+.header {
+  background-color: #1b2d37;
+  color: white;
+}
+
+.header__wrap {
+  max-width: 1411px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 230px 0 245px;
+}
+
+.header__logo {
+  padding-top: 25px;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.header__promo {
+  max-width: 1421px;
+  min-height: 787px;
+  margin: 0 241px;
+}
