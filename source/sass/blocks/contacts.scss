@@ -8,50 +8,50 @@
 }
 
 .contacts__item {
-  font-family: "PT Mono", sans-serif;
+  font-family: $pt-mono;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  color: white;
+  color: $white;
 }
 
 .contacts__mail {
+  position: relative;
   margin-right: 88px;
   padding-left: 39px;
-  position: relative;
-}
 
-.contacts__mail::before {
-  content: "";
-  position: absolute;
-  width: 19px;
-  height: 14px;
-  left: 0;
-  top: 0;
-  background-image: url("../../img/icon-mail-desktop.svg");
-  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 14px;
+    left: 0;
+    top: 0;
+    background-image: url("../../img/icon-mail-desktop.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .contacts__tel {
-  margin-right: 50px;
-  padding-left: 34px;
   position: relative;
-}
+  margin-right: 51px;
+  padding-left: 34px;
 
-.contacts__tel::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 0;
-  top: 0;
-  background-image: url("../../img/icon-phone-desktop.svg");
-  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 0;
+    background-image: url("../../img/icon-phone-desktop.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .contacts__btn {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $roboto-condensed;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -62,9 +62,9 @@
 
   display: block;
   background-color: transparent;
-  color: white;
+  color: $white;
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid $white;
   border-radius: 5px;
   min-width: 180px;
   padding: 14px 0 13px;
