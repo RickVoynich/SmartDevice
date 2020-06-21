@@ -1,0 +1,73 @@
+.info {
+  background-color: $white;
+  color: $gray;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info__wrap {
+  max-width: 1150px;
+  margin: 30px auto 110px;
+  padding-left: 170px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 317px;
+    left: -40px;
+    top: 36px;
+    background-image: url("../../img/year-desk.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.info__title {
+  font-family: $roboto-condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $gray;
+  margin-bottom: 22px;
+}
+
+.info__text {
+  font-family: $pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $gray;
+  padding-bottom: 5px;
+}
+
+.info__button {
+  width: 180px;
+  border: 1px solid $lightblue;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  font-family: $roboto-condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: $lightblue;
+  background-color: $white;
+  margin-top: 16px;
+  padding: 14px;
+
+  &:hover {
+    background-color: $lightblue;
+    color: $white;
+    cursor: pointer;
+  }
+}
