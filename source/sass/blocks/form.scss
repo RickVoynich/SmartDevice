@@ -1,0 +1,122 @@
+.form {
+  background-color: $lightblue;
+  color: $white;
+}
+
+.form__wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-left: 570px;
+  padding-bottom: 90px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.form__title {
+  font-family: $roboto-condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 5px;
+  margin-left: 11px;
+}
+
+.form__text {
+  font-family: $pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 5px;
+  margin-left: 16px;
+}
+
+.form__fieldset {
+  border: none;
+  width: 605px;
+}
+
+.form__input {
+  font-family: $pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  background-color: red;
+  border: none;
+  padding: 14px 16px;
+  margin: 30px 22px 40px 0;
+  width: 270px;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.form__input--phone {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form__input--textarea {
+  width: 570px;
+  height: 154px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form__button {
+  width: 270px;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  font-family: $roboto-condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: $lightblue;
+  color: $white;
+  padding: 14px;
+  margin: 25px 15px;
+}
+
+.form__check {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid $white;
+  box-sizing: border-box;
+  margin: 35px 10px 10px 22px;
+}
+
+.form__label {
+  width: 195px;
+  display: inline-block;
+  font-family: $pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  opacity: 0.8;
+  margin: 35px 0 10px 8px;
+}
