@@ -85,3 +85,37 @@
     color: $white;
   }
 }
+
+@media (max-width: $tablet-width) {
+
+  .advantages__list {
+    margin: 38px auto 10px;
+    padding: 0;
+    list-style: none;
+    max-width: 770px;
+    z-index: 2;
+  }
+
+  .advantages__item {
+    width: 345px;
+    min-height: 232px;
+    padding-left: 26px;
+    padding-top: 41px;
+    padding-bottom: 2px;
+    margin-left: 16px;
+    border-left: 2px solid $lightblue;
+  }
+
+  .advantages__title {
+    max-width: 350px;
+    margin-bottom: 5px;
+  }
+
+  .advantages__text {
+    max-width: 290px;
+  }
+
+  .advantages__icon {
+    top: 22px;
+  }
+}
