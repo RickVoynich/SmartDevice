@@ -46,9 +46,7 @@
 }
 
 .advantages__title {
-  font-family: $roboto-condensed;
-  font-style: normal;
-  font-weight: normal;
+  @extend %roboto-condensed-normal;
   font-size: 24px;
   line-height: 34px;
   color: $lightblue;
@@ -57,9 +55,7 @@
 }
 
 .advantages__text {
-  font-family: $pt-mono;
-  font-style: normal;
-  font-weight: normal;
+  @extend %pt-mono-normal;
   font-size: 16px;
   line-height: 22px;
   color: $gray;
@@ -89,4 +85,3 @@
     color: $white;
   }
 }
-

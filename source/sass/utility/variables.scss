@@ -1,9 +1,7 @@
 $mobile-width: 767px;
 $tablet-width: 1023px;
 $desktop-width: 1024px;
-$pt-mono: "PT Mono", sans-serif;
-$roboto: "Roboto", sans-serif;
-$roboto-condensed: "Roboto Condensed", sans-serif;
+
 
 $darkblue: #1b2d37;
 $lightblue: #00b2ff;
@@ -12,5 +10,27 @@ $lightgray: #e5e5e5;
 $gray: #666666;
 $color-border: #ebebeb;
 
-// $retina-dpi: 144dpi;
-// $retina-dppx: 1.5dppx;
+
+%pt-mono-normal {
+  font-family: "PT Mono", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+%roboto-condensed-normal {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%roboto-condensed-bold {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}

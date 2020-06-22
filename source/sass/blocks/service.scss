@@ -15,9 +15,7 @@
 }
 
 .service__title {
-  font-family: $roboto-condensed;
-  font-style: normal;
-  font-weight: normal;
+  @extend %roboto-condensed-normal;
   font-size: 36px;
   line-height: 51px;
   color: $white;
@@ -48,47 +46,9 @@
   position: relative;
 }
 
-.service__item--bg-1::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 370px;
-  height: 620px;
-  left: 0;
-  top: 0;
-  background-image: url("../../img/bg-services-1.png");
-  background-repeat: no-repeat;
-}
-
-.service__item--bg-2::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 370px;
-  height: 620px;
-  left: 0;
-  top: 0;
-  background-image: url("../../img/bg-services-2.png");
-  background-repeat: no-repeat;
-}
-
-.service__item--bg-3::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 370px;
-  height: 620px;
-  left: 0;
-  top: 0;
-  background-image: url("../../img/bg-services-3.png");
-  background-repeat: no-repeat;
-}
-
 .service__link {
   text-decoration: none;
-  font-family: $roboto-condensed;
-  font-style: normal;
-  font-weight: normal;
+  @extend %roboto-condensed-normal;
   font-size: 20px;
   line-height: 30px;
   color: $white;
@@ -96,30 +56,45 @@
   height: 620px;
   padding: 50px 155px 20px 44px;
   position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border: solid $white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    left: 335px;
+    bottom: 28px;
+    z-index: 2;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 63px;
+    height: 63px;
+    left: 307px;
+    bottom: 0;
+    background-color: $lightblue;
+    z-index: 1;
+  }
 }
 
-.service__link::before {
-  position: absolute;
-  content: "";
-  border: solid $white;
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-  left: 335px;
-  bottom: 28px;
-  z-index: 2;
+.service__link--bg-1 {
+  background-image: url("../../img/bg-services-1.png");
+  background-repeat: no-repeat;
 }
 
-.service__link::after {
-  position: absolute;
-  content: "";
-  width: 63px;
-  height: 63px;
-  left: 307px;
-  bottom: 0;
-  background-color: $lightblue;
-  z-index: 1;
+.service__link--bg-2 {
+  background-image: url("../../img/bg-services-2.png");
+  background-repeat: no-repeat;
+}
+
+.service__link--bg-3 {
+  background-image: url("../../img/bg-services-3.png");
+  background-repeat: no-repeat;
 }
 
 .service__link:hover {

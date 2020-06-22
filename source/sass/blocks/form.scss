@@ -17,9 +17,7 @@
 }
 
 .form__title {
-  font-family: $roboto-condensed;
-  font-style: normal;
-  font-weight: normal;
+  @extend %roboto-condensed-normal;
   font-size: 36px;
   line-height: 51px;
   margin-bottom: 5px;
@@ -27,9 +25,7 @@
 }
 
 .form__text {
-  font-family: $pt-mono;
-  font-style: normal;
-  font-weight: normal;
+  @extend %pt-mono-normal;
   font-size: 16px;
   line-height: 22px;
   margin-top: 5px;
@@ -42,9 +38,7 @@
 }
 
 .form__input {
-  font-family: $pt-mono;
-  font-style: normal;
-  font-weight: normal;
+  @extend %pt-mono-normal;
   font-size: 16px;
   line-height: 22px;
   color: $white;
@@ -83,9 +77,7 @@
   box-sizing: border-box;
   border-radius: 5px;
 
-  font-family: $roboto-condensed;
-  font-style: normal;
-  font-weight: bold;
+  @extend %roboto-condensed-bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
@@ -102,7 +94,6 @@
   cursor: pointer;
   width: 16px;
   height: 16px;
-
   border: 1px solid $white;
   box-sizing: border-box;
   margin: 35px 10px 10px 22px;
@@ -111,9 +102,7 @@
 .form__label {
   width: 195px;
   display: inline-block;
-  font-family: $pt-mono;
-  font-style: normal;
-  font-weight: normal;
+  @extend %pt-mono-normal;
   font-size: 14px;
   line-height: 16px;
   color: $white;

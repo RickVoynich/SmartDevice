@@ -26,9 +26,7 @@
 }
 
 .info__title {
-  font-family: $roboto-condensed;
-  font-style: normal;
-  font-weight: normal;
+  @extend %roboto-condensed-normal;
   font-size: 36px;
   line-height: 51px;
   color: $gray;
@@ -36,9 +34,7 @@
 }
 
 .info__text {
-  font-family: $pt-mono;
-  font-style: normal;
-  font-weight: normal;
+  @extend %pt-mono-normal;
   font-size: 16px;
   line-height: 22px;
   color: $gray;
@@ -51,9 +47,7 @@
   box-sizing: border-box;
   border-radius: 5px;
 
-  font-family: $roboto-condensed;
-  font-style: normal;
-  font-weight: bold;
+  @extend %roboto-condensed-bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
