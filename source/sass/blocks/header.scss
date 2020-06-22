@@ -10,7 +10,6 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-
 }
 
 .header__logo {
@@ -22,4 +21,22 @@
   flex-direction: row;
   align-items: center;
   padding-top: 20px;
+}
+
+@media (max-width: $tablet-width) {
+  .header__wrap {
+    max-width: 770px;
+  }
+
+  .header__logo {
+    padding: 13px 17px;
+  }
+
+  .header__contacts {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+
 }
