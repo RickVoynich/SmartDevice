@@ -48,13 +48,9 @@
 
 .service__link {
   text-decoration: none;
-  @extend %roboto-condensed-normal;
-  font-size: 20px;
-  line-height: 30px;
-  color: $white;
   width: 370px;
-  height: 620px;
-  padding: 50px 155px 20px 44px;
+  min-height: 620px;
+  padding: 30px 10px 20px 44px;
   position: relative;
 
   &::before {
@@ -82,22 +78,92 @@
   }
 }
 
+.service__text {
+  @extend %roboto-condensed-normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+  width: 160px;
+}
+
 .service__link--bg-1 {
   background-image: url("../../img/bg-services-1.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .service__link--bg-2 {
   background-image: url("../../img/bg-services-2.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .service__link--bg-3 {
   background-image: url("../../img/bg-services-3.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .service__link:hover {
   outline: 1px solid $lightblue;
   cursor: pointer;
+}
+
+@media (max-width: $tablet-width) {
+
+  .service__wrap {
+    max-width: 770px;
+    margin: 13px auto 46px;
+    padding-top: 10px;
+  }
+
+  .service__title {
+    width: 640px;
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 35px;
+  }
+
+  .service__list {
+    max-width: 770px;
+  }
+
+  .service__item {
+    margin: 15px;
+    margin-bottom: 31px;
+    width: 720px;
+    min-height: 256px;
+  }
+
+  .service__link {
+    width: 720px;
+    min-height: 256px;
+    padding: 19px 10px 20px 47px;
+
+    &::before {
+      left: 689px;
+      bottom: 30px;
+      padding: 2px;
+    }
+
+    &::after {
+      left: 660px;
+    }
+  }
+
+  .service__link--bg-1 {
+    background-image: url("../../img/bg-services-tab-1.png");
+  }
+
+  .service__link--bg-2 {
+    background-image: url("../../img/bg-services-tab-2.png");
+  }
+
+  .service__link--bg-3 {
+    background-image: url("../../img/bg-services-tab-3.png");
+  }
+
+  .service__text {
+    width: 170px;
+  }
 }
