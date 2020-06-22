@@ -4,14 +4,14 @@
 }
 
 .form__wrap {
-  max-width: 1140px;
+  width: 1140px;
   margin: 0 auto;
   padding-top: 60px;
   padding-left: 570px;
   padding-bottom: 90px;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
 }
@@ -42,10 +42,10 @@
   font-size: 16px;
   line-height: 22px;
   color: $white;
-  background-color: red;
-  border: none;
+  background-color: $white-opacity;
+  border: 1px solid $white-opacity;
   padding: 14px 16px;
-  margin: 30px 22px 40px 0;
+  margin: 30px 22px 10px 0;
   width: 270px;
 
   &::placeholder {
@@ -61,14 +61,6 @@
 .form__input--textarea {
   width: 570px;
   height: 154px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.form__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .form__button {
@@ -87,25 +79,103 @@
   background-color: $lightblue;
   color: $white;
   padding: 14px;
-  margin: 25px 15px;
+  margin: 15px;
 }
 
-.form__check {
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  border: 1px solid $white;
-  box-sizing: border-box;
-  margin: 35px 10px 10px 22px;
+.form__wrapper {
+  width: 250px;
 }
 
 .form__label {
-  width: 195px;
-  display: inline-block;
+  position: relative;
+  display: block;
   @extend %pt-mono-normal;
   font-size: 14px;
   line-height: 16px;
+  text-align: left;
   color: $white;
   opacity: 0.8;
-  margin: 35px 0 10px 8px;
+  padding-top: 25px;
+  padding-left: 38px;
+}
+
+.form__checkbox {
+  appearance: none;
+}
+
+.form__check {
+  position: absolute;
+  top: 26px;
+  left: 24px;
+  width: 15px;
+  height: 15px;
+  border: solid 1px #fff;
+  cursor: pointer;
+}
+
+input:checked+.form__check::before {
+  top: 1px;
+  left: 4px;
+  border-right: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  transform: rotate(45deg);
+  width: 5px;
+  height: 7px;
+  position: absolute;
+  content: "";
+}
+
+
+@media (max-width: $tablet-width) {
+
+  .form__wrap {
+    max-width: 770px;
+    padding-top: 53px;
+    padding-left: 68px;
+    padding-bottom: 65px;
+  }
+
+  .form__title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .form__text {
+    margin-top: 12px;
+  }
+
+  .form__input {
+    padding: 14px 19px;
+    width: 278px;
+  }
+
+  .form__input--phone {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form__input--textarea {
+    width: 590px;
+    height: 159px;
+  }
+
+  .form__button {
+    width: 280px;
+    padding: 14px;
+    margin: 24px 15px;
+  }
+
+  .form__wrapper {
+    width: 280px;
+  }
+
+  .form__label {
+    padding-top: 31px;
+    padding-left: 41px;
+  }
+
+  .form__check {
+    top: 32px;
+    left: 26px;
+  }
 }
