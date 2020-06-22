@@ -45,9 +45,11 @@
         <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <!-- Якорные ссылки, плавно пролистывающие страницу до блока преимуществ и формы в подвале соответственно -->
         <a class="promo__button" href="#">Получить бесплатную консультацию</a>
-        <a class="promo__link" href="#">Скролл вниз</a>
+        <a class="promo__link only-desktop" href="#">Скролл вниз</a>
       </div>
-      <div class="promo__img"></div>
+      <div class="promo__wrap">
+        <img class="promo__img" src="./img/pcboard-desktop.png" width="705" height="515" alt="Стопка печатных плат">
+      </div>
     </section>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
@@ -162,9 +164,11 @@
         </p>
         <p class="info__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
           HOLGLITRONIC, REFOND. Печатные
-          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
-          РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-          светотехники России.
+          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span
+            class="info__ellipsis">..</span>
+          <span class="info__continuation"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
+            клиентов крупнейшие Производители
+            светотехники России.</span>
         </p>
         <button class="info__button" type="button">Подробнее</button>
       </div>
@@ -174,13 +178,19 @@
         <h2 class="service__title">Service Device предлагает следующие товары и услуги</h2>
         <ul class="service__list">
           <li class="service__item">
-            <a class="service__link service__link--bg-1" href="#">Производство печатных плат</a>
+            <a class="service__link service__link--bg-1" href="#">
+              <p class="service__text">Производство печатных плат</p>
+            </a>
           </li>
           <li class="service__item">
-            <a class="service__link service__link--bg-2" href="#">Монтаж печатных плат</a>
+            <a class="service__link service__link--bg-2" href="#">
+              <p class="service__text">Монтаж печатных плат</p>
+            </a>
           </li>
           <li class="service__item">
-            <a class="service__link service__link--bg-3" href="#">Комплектующие для светотехники</a>
+            <a class="service__link service__link--bg-3" href="#">
+              <p class="service__text">Комплектующие для светотехники</p>
+            </a>
           </li>
         </ul>
       </div>
@@ -203,11 +213,11 @@
             <textarea class="form__input form__input--textarea" placeholder="Ваш вопрос"></textarea>
           </label>
         </fieldset>
+        <button class="form__button" type="submit">Задать вопрос</button>
         <div class="form__wrapper">
-          <button class="form__button" type="submit">Задать вопрос</button>
-          <input class="form__check" type="checkbox">
-          <label class="form__label">
-            Я согласен на обработку персональных данных
+
+          <label class="form__label"> <input class="form__checkbox" type="checkbox">
+            <span class="form__check"></span>Я согласен на обработку персональных данных
           </label>
         </div>
       </form>
