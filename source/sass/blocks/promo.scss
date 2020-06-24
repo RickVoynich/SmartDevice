@@ -3,20 +3,13 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  padding-bottom: 273px;
-}
-
-.promo__bg-img {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 870px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  left: 0;
-  top: -83px;
+  padding-top: 83px;
+  padding-bottom: 274px;
   background-color: $darkblue;
-  background-image: url("../../img/bg-promo-desktop.jpg");
+  background-image: url("../../img/bg-promo-desktop.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: -10;
 }
 
@@ -25,15 +18,33 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 740px;
+  width: 100%;
+  max-width: 1422px;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("../../img/pcboard-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 705px;
+    height: 515px;
+    z-index: -2;
+    top: 33%;
+    right: -5%;
+  }
 }
 
 .promo__title {
-  width: 718px;
+  width: 720px;
   margin: 0;
-  padding-top: 224px;
-  margin-left: 127px;
-  @extend %roboto-condensed-bold;
+  padding-top: 223px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 0.07em;
@@ -42,14 +53,15 @@
 }
 
 .promo__text {
-  width: 670px;
-  @extend %pt-mono-normal;
+  width: 720px;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
   font-size: 22px;
   line-height: 34px;
   color: $white;
-  margin-top: 27px;
-  margin-left: 164px;
-  padding-left: 60px;
+  margin-top: 28px;
+  padding-left: 97px;
   position: relative;
 
   &::before {
@@ -58,7 +70,7 @@
     display: block;
     width: 66px;
     height: 3px;
-    left: -34px;
+    left: 4px;
     top: 16px;
     background-color: $white;
   }
@@ -70,7 +82,9 @@
   color: $white;
   border-radius: 5px;
 
-  @extend %roboto-condensed-bold;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
@@ -81,74 +95,63 @@
   cursor: pointer;
   padding: 18px 0;
   margin-top: 22px;
-  margin-left: 224px;
+  margin-left: 98px;
+}
+
+.promo__btn-title--mobile {
+  display: none;
 }
 
 .promo__link {
   position: absolute;
   width: 93px;
-  @extend %pt-mono-normal;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   color: $white;
 
   opacity: 0.5;
   transform: rotate(-90deg);
-  left: 92px;
+  left: -35px;
   top: 643px;
-}
-
-.promo__img {
-  position: relative;
-  display: block;
-  width: 705px;
-  height: 515px;
-  top: 168px;
-  left: -53px;
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   display: block;
-  //   width: 670px;
-  //   height: 640px;
-  //   left: -8px;
-  //   bottom: 15px;
-  //   background-repeat: no-repeat;
-  //   background-image: url("../../img/polygon-promo-desk.svg");
-  //   z-index: -1;
-  // }
+  cursor: pointer;
 }
 
 @media (max-width: $tablet-width) {
   .promo {
-    padding-bottom: 80px;
-  }
-
-  .promo__bg-img {
-    top: -276px;
+    padding-bottom: 164px;
+    background-image: url("../../img/bg-promo-tablet.png");
   }
 
   .promo__wrap {
-    max-width: 770px;
+    max-width: 720px;
     padding-bottom: 0;
+
+    &::before {
+      width: 465px;
+      height: 340px;
+      top: 5%;
+      right: -32%;
+    }
   }
 
   .promo__title {
-    width: 470px;
+    width: 400px;
     margin: 0;
-    padding-top: 96px;
-    padding-left: 80px;
+    padding-top: 97px;
+    padding-left: 64px;
     font-size: 60px;
     line-height: 70px;
   }
 
   .promo__text {
-    width: 456px;
+    width: 362px;
     font-size: 18px;
     line-height: 28px;
     margin-top: 29px;
-    margin-left: 116px;
+    margin-left: 100px;
     padding-left: 15px;
 
     &::before {
@@ -161,27 +164,64 @@
   .promo__button {
     width: 379px;
     margin-top: 37px;
-    margin-left: 131px;
+    margin-left: 115px;
   }
 
-  // .promo__img {
-  //   width: 465px;
-  //   height: 340px;
-  //   right: 69px;
-  //   top: 19px;
+  .promo__link {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    padding-bottom: 68px;
+    background-image: url("../../img/bg-promo-mobile.png");
+  }
 
 
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     display: block;
-  //     width: 670px;
-  //     height: 640px;
-  //     left: -8px;
-  //     bottom: 15px;
-  //     background-repeat: no-repeat;
-  //     background-image: url("../../img/polygon-promo-desk.svg");
-  //     z-index: -1;
-  //   }
-  // }
+  .promo__wrap {
+    min-width: 320px;
+    padding: 0 8px;
+
+    &::before {
+      width: 301px;
+      height: 220px;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .promo__title {
+    width: 277px;
+    padding-top: 195px;
+    padding-left: 0;
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .promo__text {
+    width: 245px;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 28px;
+    margin-left: 34px;
+
+    &::before {
+      top: 13px;
+    }
+  }
+
+  .promo__button {
+    width: 290px;
+    margin-top: 24px;
+    margin-left: 0;
+  }
+
+  .promo__btn-title--hidden {
+    display: none;
+  }
+
+  .promo__btn-title--mobile {
+    display: block;
+  }
 }
