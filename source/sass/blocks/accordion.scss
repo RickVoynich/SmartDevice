@@ -1,0 +1,38 @@
+@media (max-width: $mobile-width) {
+  .accordion__btn {
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      top: 50%;
+      left: 0;
+      background-color: #c4c4c4;
+      transition: .3s ease;
+      width: 16px;
+      height: 1px;
+      position: absolute;
+      content: "";
+    }
+  }
+
+  .accordion__btn--on {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  .accordion__btn--on+.menu__nav {
+    display: flex;
+  }
+
+  .accordion__btn--on+.contact__content {
+    display: flex;
+  }
+}
