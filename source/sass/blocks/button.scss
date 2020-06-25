@@ -1,0 +1,15 @@
+.button {
+  font-family: $roboto-condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  display: block;
+  cursor: pointer;
+
+  @include hover;
+}
