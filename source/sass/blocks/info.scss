@@ -22,14 +22,14 @@
     height: 317px;
     left: -34px;
     top: 35px;
-    background-image: url("../../img/year-desk@1x.png");
+    background-image: url("../img/year-desk@1x.png");
     background-repeat: no-repeat;
   }
 }
 
 @include retina {
   .info__wrap::before {
-    background-image: url("../../img/year-desk@2x.png");
+    background-image: url("../img/year-desk@2x.png");
     background-size: 220px 317px;
   }
 }
@@ -82,13 +82,13 @@
       height: 361px;
       left: -9px;
       top: 7px;
-      background-image: url("../../img/year-tablet@1x.png");
+      background-image: url("../img/year-tablet@1x.png");
     }
   }
 
   @include retina {
     .info__wrap::before {
-      background-image: url("../../img/year-tablet@2x.png");
+      background-image: url("../img/year-tablet@2x.png");
       background-size: 251px 361px;
     }
   }

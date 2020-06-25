@@ -6,7 +6,7 @@
   padding-top: 83px;
   padding-bottom: 274px;
   background-color: $darkblue;
-  background-image: url("../../img/bg-promo-desktop@1x.png");
+  background-image: url("../img/bg-promo-desktop@1x.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
     position: absolute;
     display: block;
     content: "";
-    background-image: url("../../img/plata-desktop@1x.png");
+    background-image: url("../img/plata-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -41,11 +41,11 @@
 
 @include retina {
   .promo {
-    background-image: url("../../img/bg-promo-desktop@2x.png");
+    background-image: url("../img/bg-promo-desktop@2x.png");
   }
 
   .promo__wrap::before {
-    background-image: url("../../img/plata-desktop@2x.png");
+    background-image: url("../img/plata-desktop@2x.png");
   }
 }
 
@@ -127,7 +127,7 @@
 @include tablet-width {
   .promo {
     padding-bottom: 164px;
-    background-image: url("../../img/bg-promo-tablet@1x.png");
+    background-image: url("../img/bg-promo-tablet@1x.png");
   }
 
   .promo__wrap {
@@ -135,7 +135,7 @@
     padding-bottom: 0;
 
     &::before {
-      background-image: url("../../img/plata-tablet@1x.png");
+      background-image: url("../img/plata-tablet@1x.png");
       width: 465px;
       height: 340px;
       top: 5%;
@@ -145,11 +145,11 @@
 
   @include retina {
     .promo {
-      background-image: url("../../img/bg-promo-tablet@2x.png");
+      background-image: url("../img/bg-promo-tablet@2x.png");
     }
 
     .promo__wrap::before {
-      background-image: url("../../img/plata-tablet@2x.png");
+      background-image: url("../img/plata-tablet@2x.png");
     }
   }
 
@@ -192,7 +192,7 @@
 @include mobile-width {
   .promo {
     padding-bottom: 68px;
-    background-image: url("../../img/bg-promo-mobile@1x.png");
+    background-image: url("../img/bg-promo-mobile@1x.png");
   }
 
   .promo__wrap {
@@ -200,7 +200,7 @@
     padding: 0 8px;
 
     &::before {
-      background-image: url("../../img/plata-mobile@1x.png");
+      background-image: url("../img/plata-mobile@1x.png");
       width: 301px;
       height: 220px;
       top: 0;
@@ -210,11 +210,11 @@
 
   @include retina {
     .promo {
-      background-image: url("../../img/bg-promo-mobile@2x.png");
+      background-image: url("../img/bg-promo-mobile@2x.png");
     }
 
     .promo__wrap::before {
-      background-image: url("../../img/plata-mobile@2x.png");
+      background-image: url("../img/plata-mobile@2x.png");
     }
   }
 

@@ -1,7 +1,7 @@
 .form {
   background-color: $lightblue;
   color: $white;
-  background-image: url("../../img/bg-form@1x.png");
+  background-image: url("../img/bg-form@1x.png");
   background-position: center -60px;
   background-size: 1920px 764px;
   background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
 @include retina {
   .form {
-    background-image: url("../../img/bg-form@2x.png");
+    background-image: url("../img/bg-form@2x.png");
   }
 }
 
