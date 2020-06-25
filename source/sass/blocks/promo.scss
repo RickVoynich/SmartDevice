@@ -21,6 +21,7 @@
   width: 100%;
   max-width: 1422px;
 
+
   &::before {
     position: absolute;
     display: block;
@@ -91,25 +92,16 @@
   color: $white;
   border-radius: 5px;
 
-  font-family: $roboto-condensed;
-  font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-
-  display: block;
-  cursor: pointer;
   padding: 18px 0;
   margin-top: 22px;
   margin-left: 98px;
+  border: 1px solid $lightblue;
 
-  @include hover;
-}
-
-.promo__btn-title--mobile {
-  display: none;
+  &--mobile {
+    display: none;
+  }
 }
 
 .promo__link {
@@ -195,6 +187,7 @@
   }
 }
 
+
 @include mobile-width {
   .promo {
     padding-bottom: 68px;
@@ -248,13 +241,13 @@
     width: 290px;
     margin-top: 24px;
     margin-left: 0;
-  }
 
-  .promo__btn-title--hidden {
-    display: none;
-  }
+    &--desktop {
+      display: none;
+    }
 
-  .promo__btn-title--mobile {
-    display: block;
+    &--mobile {
+      display: block;
+    }
   }
 }

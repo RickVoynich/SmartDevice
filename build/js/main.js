@@ -118,7 +118,7 @@ if (link && popup) {
 'use strict';
 
 var scrollBtn = document.querySelector('.promo__link');
-var formBtn = document.querySelector('.promo__button');
+var formBtn = document.querySelectorAll('.promo__button');
 var advantagesNode = document.querySelector('.advantages');
 var formNode = document.querySelector('.form');
 
@@ -130,10 +130,12 @@ if (scrollBtn && advantagesNode) {
     moveTo.move(advantagesNode);
   });
 }
+formBtn.forEach(btn => {
+  if (btn && formNode) {
+    btn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      moveTo.move(formNode);
+    });
+  }
+});
 
-if (formBtn && formNode) {
-  formBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    moveTo.move(formNode);
-  });
-}
