@@ -5,14 +5,14 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  width: 61%;
+  width: 95%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .info__wrap {
-  margin: 30px auto 110px;
-  padding-left: 176px;
+  margin: 48px auto 80px;
+  padding-left: 192px;
   position: relative;
 
   &::before {
@@ -20,7 +20,7 @@
     content: "";
     width: 220px;
     height: 317px;
-    left: -34px;
+    left: -15px;
     top: 35px;
     background-image: url("../img/year-desk@1x.png");
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
   border-radius: 5px;
   color: $lightblue;
   background-color: $white;
-  margin-top: 16px;
+  margin-top: 32px;
   padding: 14px;
 }
 
@@ -97,7 +97,7 @@
     font-size: 32px;
     line-height: 45px;
     margin-bottom: 22px;
-    margin-top: 10px;
+    margin-top: 25px;
   }
 
   .info__text {
@@ -113,7 +113,7 @@
   }
 
   .info__button {
-    margin-top: 21px;
+    margin-top: 37px;
     padding: 14px;
   }
 }
@@ -125,8 +125,8 @@
   }
 
   .info__wrap {
-    margin: 5px auto 64px;
-    padding-left: 8px;
+    margin: 16px 3% 64px;
+    padding-left: 7px;
 
     &::before {
       display: none;
@@ -141,8 +141,7 @@
   }
 
   .info__text {
-    padding-top: 5px;
-    padding-bottom: 19px;
+    padding: 4px 0 19px;
     margin-bottom: 0;
   }
 

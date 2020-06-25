@@ -71,8 +71,8 @@
     &::before {
       width: 25px;
       height: 18px;
-      left: -98px;
-      top: -20px;
+      left: -77px;
+      top: -19px;
       background-image: url("../img/icon-mail-tablet.svg");
     }
   }
@@ -84,8 +84,8 @@
     &::before {
       width: 24px;
       height: 24px;
-      left: -40px;
-      top: -24px;
+      left: -21px;
+      top: -22px;
       background-image: url("../img/icon-phone-tablet.svg");
     }
   }
@@ -103,14 +103,14 @@
 @include mobile-width {
   .contacts__mail {
     &::before {
-      left: -86px;
+      left: -67px;
       top: -16px;
     }
   }
 
   .contacts__tel {
     &::before {
-      left: -38px;
+      left: -19px;
       top: -19px;
     }
   }

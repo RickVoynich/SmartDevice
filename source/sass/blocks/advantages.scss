@@ -5,10 +5,10 @@
   align-content: center;
   justify-content: center;
   position: relative;
-  width: 63%;
+  width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 83px 0 13px;
+  padding: 94px 0 13px;
 }
 
 .advantages__list {
@@ -17,9 +17,9 @@
   align-items: stretch;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0;
-  list-style: none;
   z-index: 2;
+
+  @include ul-reset;
 }
 
 .advantages__item {
@@ -81,7 +81,7 @@
 @include tablet-width {
   .advantages {
     width: 93.75%;
-    padding: 22px 0 12px;
+    padding: 40px 0 12px;
     min-width: 750px;
   }
 
@@ -129,22 +129,24 @@
 @include mobile-width {
   .advantages {
     width: 90.6%;
-    padding: 8px 0 10px;
+    padding: 26px 0 12px;
     min-width: 320px;
   }
 
   .advantages__item {
-    min-height: auto;
+    min-height: 232px;
     width: 100%;
     min-width: 290px;
-    padding: 50px 13px 17px 23px;
-    margin: 15px 22px 6px 8px;
+    padding: 50px 11px 16px 24px;
+    margin: 10px 15px;
   }
 
   .advantages__title {
     max-width: 233px;
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 5px;
+    margin-top: 20px;
   }
 
   .advantages__text {
