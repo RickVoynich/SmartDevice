@@ -33,9 +33,12 @@
   flex-grow: 2.9;
 }
 
+.copyright__link:hover,
+.copyright__developed:hover {
+  opacity: 1;
+}
 
-@media (max-width: $tablet-width) {
-
+@include tablet-width {
   .copyright {
     width: 100%;
     min-width: 721px;
@@ -52,8 +55,7 @@
   }
 }
 
-@media (max-width: $mobile-width) {
-
+@include mobile-width {
   .copyright {
     min-width: 320px;
     width: 100%;

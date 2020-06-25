@@ -3,14 +3,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+  @include ul-reset;
 }
 
 .contacts__item {
-  font-family: "PT Mono", monospace;
-  font-style: normal;
+  font-family: $pt-mono;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -51,28 +49,21 @@
   }
 }
 
-.contacts__btn {
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.contacts__mail,
+.contacts__tel {
+  @include hover;
+}
 
-  display: block;
+.contacts__btn {
   background-color: transparent;
   color: $white;
-  cursor: pointer;
   border: 1px solid $white;
   border-radius: 5px;
   min-width: 180px;
   padding: 14px 0 13px;
 }
 
-@media (max-width: $tablet-width) {
-
+@include tablet-width {
   .contacts__mail {
     margin: 0;
     padding: 0;
@@ -99,15 +90,18 @@
     }
   }
 
+  .contacts__mail span,
+  .contacts__tel span {
+    display: none;
+  }
+
   .contacts__btn {
     display: none;
   }
 }
 
-@media (max-width: $mobile-width) {
-
+@include mobile-width {
   .contacts__mail {
-
     &::before {
       left: -86px;
       top: -16px;
@@ -115,11 +109,9 @@
   }
 
   .contacts__tel {
-
     &::before {
       left: -38px;
       top: -19px;
     }
   }
-
 }

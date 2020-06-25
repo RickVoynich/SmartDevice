@@ -6,11 +6,11 @@
   padding-top: 83px;
   padding-bottom: 274px;
   background-color: $darkblue;
-  background-image: url("../../img/bg-promo-desktop.png");
+  background-image: url("../../img/bg-promo-desktop@1x.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -10;
+  z-index: 1;
 }
 
 .promo__wrap {
@@ -20,21 +20,30 @@
   flex-direction: column;
   width: 100%;
   max-width: 1422px;
-  z-index: 1;
 
   &::before {
     position: absolute;
     display: block;
     content: "";
-    background-image: url("../../img/pcboard-desktop.png");
+    background-image: url("../../img/plata-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     width: 705px;
     height: 515px;
-    z-index: -2;
+    z-index: 2;
     top: 33%;
     right: -5%;
+  }
+}
+
+@include retina {
+  .promo {
+    background-image: url("../../img/bg-promo-desktop@2x.png");
+  }
+
+  .promo__wrap::before {
+    background-image: url("../../img/plata-desktop@2x.png");
   }
 }
 
@@ -42,20 +51,19 @@
   width: 720px;
   margin: 0;
   padding-top: 223px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
+  font-family: $roboto-condensed;
   font-weight: bold;
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: $white;
+  z-index: 3;
 }
 
 .promo__text {
   width: 720px;
-  font-family: "PT Mono", monospace;
-  font-style: normal;
+  font-family: $pt-mono;
   font-weight: normal;
   font-size: 22px;
   line-height: 34px;
@@ -63,6 +71,7 @@
   margin-top: 28px;
   padding-left: 97px;
   position: relative;
+  z-index: 3;
 
   &::before {
     content: "";
@@ -82,8 +91,7 @@
   color: $white;
   border-radius: 5px;
 
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
+  font-family: $roboto-condensed;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -96,6 +104,8 @@
   padding: 18px 0;
   margin-top: 22px;
   margin-left: 98px;
+
+  @include hover;
 }
 
 .promo__btn-title--mobile {
@@ -105,24 +115,26 @@
 .promo__link {
   position: absolute;
   width: 93px;
-  font-family: "PT Mono", monospace;
-  font-style: normal;
+  font-family: $pt-mono;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   color: $white;
-
   opacity: 0.5;
   transform: rotate(-90deg);
   left: -35px;
   top: 643px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-@media (max-width: $tablet-width) {
+@include tablet-width {
   .promo {
     padding-bottom: 164px;
-    background-image: url("../../img/bg-promo-tablet.png");
+    background-image: url("../../img/bg-promo-tablet@1x.png");
   }
 
   .promo__wrap {
@@ -130,10 +142,21 @@
     padding-bottom: 0;
 
     &::before {
+      background-image: url("../../img/plata-tablet@1x.png");
       width: 465px;
       height: 340px;
       top: 5%;
       right: -32%;
+    }
+  }
+
+  @include retina {
+    .promo {
+      background-image: url("../../img/bg-promo-tablet@2x.png");
+    }
+
+    .promo__wrap::before {
+      background-image: url("../../img/plata-tablet@2x.png");
     }
   }
 
@@ -172,22 +195,32 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@include mobile-width {
   .promo {
     padding-bottom: 68px;
-    background-image: url("../../img/bg-promo-mobile.png");
+    background-image: url("../../img/bg-promo-mobile@1x.png");
   }
-
 
   .promo__wrap {
     min-width: 320px;
     padding: 0 8px;
 
     &::before {
+      background-image: url("../../img/plata-mobile@1x.png");
       width: 301px;
       height: 220px;
       top: 0;
       right: 0;
+    }
+  }
+
+  @include retina {
+    .promo {
+      background-image: url("../../img/bg-promo-mobile@2x.png");
+    }
+
+    .promo__wrap::before {
+      background-image: url("../../img/plata-mobile@2x.png");
     }
   }
 

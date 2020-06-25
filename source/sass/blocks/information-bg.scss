@@ -1,0 +1,14 @@
+.information {
+  background-color: $white;
+  background-image: url("../../img/bg-adv@1x.png");
+  background-position: center -28px;
+  background-size: 1920px 1347px;
+  background-repeat: no-repeat;
+  z-index: -10;
+}
+
+@include retina {
+  .information {
+    background-image: url("../../img/bg-adv@2x.png");
+  }
+}

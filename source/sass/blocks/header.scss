@@ -24,8 +24,10 @@
   padding-top: 25px;
 }
 
-.header__img--mobile {
-  display: none;
+.header__img {
+  &--mobile {
+    display: none;
+  }
 }
 
 .header__contacts {
@@ -36,7 +38,7 @@
   justify-content: flex-end;
 }
 
-@media (max-width: $tablet-width) {
+@include tablet-width {
   .header {
     margin: 0 auto;
   }
@@ -55,7 +57,7 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@include mobile-width {
   .header__wrap {
     min-width: 288px;
     padding: 0 10px;
@@ -65,11 +67,14 @@
     padding: 9px 0;
   }
 
-  .header__img--hidden {
-    display: none;
-  }
 
-  .header__img--mobile {
-    display: block;
+  .header__img {
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
   }
 }

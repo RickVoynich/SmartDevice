@@ -2,6 +2,11 @@ $mobile-width: 767px;
 $tablet-width: 1023px;
 $desktop-width: 1024px;
 
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$opacity-hover: 0.5;
+$opacity-active: 0.3;
 
 $darkblue: #1b2d37;
 $lightblue: #00b2ff;
@@ -10,3 +15,6 @@ $lightgray: #e5e5e5;
 $gray: #666666;
 $color-border: #ebebeb;
 $white-opacity: rgba(255, 255, 255, 0.1);
+
+$pt-mono: "PT Mono", "Courier New", monospace;
+$roboto-condensed: "Roboto Condensed", "Arial", sans-serif;

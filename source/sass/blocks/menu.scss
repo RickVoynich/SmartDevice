@@ -1,10 +1,9 @@
 .menu__title {
   margin: 0 0 25px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $roboto-condensed;
   font-size: 15px;
   line-height: 16px;
   font-weight: normal;
-  font-style: normal;
   color: $darkblue;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -23,9 +22,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+  @include ul-reset;
 }
 
 .menu__link {
@@ -33,18 +31,20 @@
   opacity: 0.5;
   font-size: 15px;
   line-height: 25px;
-  font-family: "PT Mono", monospace;
-  font-style: normal;
+  font-family: $pt-mono;
   font-weight: normal;
   letter-spacing: 0.03em;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.menu____accordion-btn {
+.menu__accordion-btn {
   display: none;
 }
 
-@media (max-width: $tablet-width) {
-
+@include tablet-width {
   .menu__nav {
     flex-direction: column;
   }
@@ -54,7 +54,7 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@include mobile-width {
   .menu__nav {
     width: 100%;
     display: none;

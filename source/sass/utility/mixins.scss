@@ -1,0 +1,33 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin tablet-width {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile-width {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin hover($hover: $opacity-hover, $active: $opacity-active) {
+  &:hover {
+    opacity: $hover;
+  }
+
+  &:active {
+    opacity: $active;
+  }
+}

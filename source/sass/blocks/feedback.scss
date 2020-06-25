@@ -8,32 +8,29 @@
   z-index: 100;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.5);
-  animation: fade-in .6s ease;
+  animation: fade-in 0.6s ease;
 }
 
-.feedback__popup--on {
+.feedback__popup--opened {
   display: block;
 }
 
 .feedback__content {
   position: relative;
-  top: 50%;
+  top: 20%;
   left: 50%;
   margin-bottom: 33px;
   transform: translateX(-50%);
-}
-
-.feedback__form {
   width: 490px;
   margin-top: 10px;
   padding: 31px 39px 37px;
   background-color: $lightblue;
 }
 
-.feedback__form-lead {
+.feedback__title {
   display: block;
   margin-bottom: 12px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $roboto-condensed;
   color: $white;
   font-size: 28px;
   line-height: 39px;
@@ -48,104 +45,56 @@
   line-height: 22px;
 }
 
-.feedback__input,
-.feedback__textarea,
-.feedback__button {
-  padding: 13px 23px;
-}
+.feedback__form {
 
-.feedback__input,
-.feedback__textarea {
-  margin-bottom: 31px;
-  color: $white;
-  background-color: $white-opacity;
-  border: 1px solid $white-opacity;
-  outline: 0;
-  transition: 0.3s ease;
-  font-size: 16px;
-  line-height: 22px;
-  width: 100%;
-}
+  input,
+  textarea,
+  button {
+    padding: 13px 23px;
+  }
 
-.feedback__input {
-  height: 52px;
-}
+  input,
+  textarea {
+    margin-bottom: 31px;
+    width: 100%;
+  }
 
-.feedback__textarea {
-  height: 104px;
-  resize: none;
-  padding-top: 10px;
-  margin-bottom: 23px;
-}
+  input {
+    height: 52px;
+  }
 
-.feedback__button {
-  margin-bottom: 35px;
-  padding: 15px 50px;
-  font-family: "Roboto Condensed", sans-serif;
-  text-align: center;
-  color: $white;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  background-color: transparent;
-  border: 1px solid $white;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-  transition: 0.3s ease;
-  width: 100%;
+  textarea {
+    height: 104px;
+    padding-top: 10px;
+    margin-bottom: 23px;
+  }
 
-  &:hover {
-    color: $lightblue;
-    background-color: $white;
+  button {
+    margin-bottom: 35px;
+    padding: 15px 50px;
+    color: $white;
+    background-color: transparent;
+    width: 100%;
   }
 }
 
-.feedback__label {
-  position: relative;
-  display: block;
-  font-family: "PT Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: left;
-  color: $white;
-  opacity: 0.8;
-  padding-left: 49px;
-  width: 400px;
-  cursor: pointer;
-}
+.feedback__agreement {
+  label {
+    padding-left: 49px;
+    width: 400px;
+  }
 
-.feedback__check {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border: solid 1px $white;
-  cursor: pointer;
-}
+  input:checked+span::before {
+    top: 1px;
+    left: 4px;
+    width: 5px;
+    height: 7px;
+  }
 
-.feedback__checkbox:checked+.feedback__check::before {
-  top: 1px;
-  left: 4px;
-  border-right: solid 1px $white;
-  border-bottom: solid 1px $white;
-  transform: rotate(45deg);
-  width: 5px;
-  height: 7px;
-  position: absolute;
-  content: "";
-}
-
-.feedback__checkbox:hover+.feedback__check {
-  opacity: 0.5;
-}
-
-.feedback__checkbox:focus+.feedback__check {
-  border: solid 1px $darkblue;
+  label,
+  input+span {
+    @include hover;
+  }
 }
 
 .feedback__close-btn {
@@ -158,11 +107,8 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  transition: 0.3s ease;
-}
 
-.feedback__close-btn::before {
-  transform: rotate(45deg);
+  @include hover;
 }
 
 .feedback__close-btn::after,
@@ -175,6 +121,10 @@
   height: 1px;
   position: absolute;
   content: "";
+}
+
+.feedback__close-btn::before {
+  transform: rotate(45deg);
 }
 
 .feedback__close-btn::after {

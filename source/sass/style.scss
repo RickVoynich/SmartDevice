@@ -1,19 +1,23 @@
+@import "./utility/normalize.scss";
 @import "./utility/fonts.scss";
 @import "./utility/variables.scss";
+@import "./utility/mixins.scss";
 @import "./utility/global.scss";
+@import "./blocks/button.scss";
+@import "./blocks/form-temlate.scss";
 @import "./blocks/header.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/promo.scss";
-@import "./blocks/information.scss";
+@import "./blocks/information-bg.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/info.scss";
 @import "./blocks/service.scss";
 @import "./blocks/form.scss";
 @import "./blocks/page-footer.scss";
-@import "./blocks/contact.scss";
-@import "./blocks/copyright.scss";
 @import "./blocks/social.scss";
+@import "./blocks/contact.scss";
 @import "./blocks/menu.scss";
+@import "./blocks/copyright.scss";
 @import "./blocks/accordion.scss";
 @import "./blocks/feedback.scss";
 

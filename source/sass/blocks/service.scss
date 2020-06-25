@@ -14,8 +14,7 @@
 }
 
 .service__title {
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
+  font-family: $roboto-condensed;
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
@@ -29,9 +28,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0;
+
+  @include ul-reset;
+
   margin: 0 15px;
-  list-style: none;
 }
 
 .service__item {
@@ -50,6 +50,7 @@
   display: block;
   min-height: 620px;
   padding: 31px 44px;
+  background-color: $darkblue;
 
   &::before {
     position: absolute;
@@ -76,9 +77,16 @@
   }
 }
 
+.service__link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .service__text {
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
+  font-family: $roboto-condensed;
   font-weight: normal;
   font-size: 20px;
   line-height: 30px;
@@ -86,31 +94,12 @@
   width: 160px;
 }
 
-.service__link--bg-1 {
-  background-image: url("../../img/bg-services-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.service__link--bg-2 {
-  background-image: url("../../img/bg-services-2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.service__link--bg-3 {
-  background-image: url("../../img/bg-services-3.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .service__link:hover {
   outline: 1px solid $lightblue;
   cursor: pointer;
 }
 
-@media (max-width: $tablet-width) {
-
+@include tablet-width {
   .service__wrap {
     width: 93.75%;
     min-width: 770px;
@@ -133,27 +122,13 @@
   .service__item {
     margin-bottom: 45px;
     margin-right: 0;
-    width: 100%;
+    width: 97%;
     min-height: 256px;
   }
 
   .service__link {
-    width: 100%;
-    min-width: 720px;
+    padding: 39px 44px 44px;
     min-height: 256px;
-    padding: 19px 10px 20px 47px;
-  }
-
-  .service__link--bg-1 {
-    background-image: url("../../img/bg-services-tab-1.png");
-  }
-
-  .service__link--bg-2 {
-    background-image: url("../../img/bg-services-tab-2.png");
-  }
-
-  .service__link--bg-3 {
-    background-image: url("../../img/bg-services-tab-3.png");
   }
 
   .service__text {
@@ -161,7 +136,7 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@include mobile-width {
   .service {
     padding-top: 1px;
   }
@@ -194,20 +169,7 @@
   }
 
   .service__link {
-    min-width: 290px;
-    padding: 22px 37px;
-  }
-
-  .service__link--bg-1 {
-    background-image: url("../../img/bg-services-mob-1.png");
-  }
-
-  .service__link--bg-2 {
-    background-image: url("../../img/bg-services-mob-2.png");
-  }
-
-  .service__link--bg-3 {
-    background-image: url("../../img/bg-services-mob-3.png");
+    padding: 22px 35px;
   }
 
   .service__text {
