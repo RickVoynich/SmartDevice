@@ -1,4 +1,5 @@
 .form-template {
+
   input,
   textarea {
     font-family: $pt-mono;
@@ -9,6 +10,7 @@
     background-color: $white-opacity;
     border: 1px solid $white-opacity;
     outline: 0;
+    cursor: pointer;
 
     &::placeholder {
       color: $white;
