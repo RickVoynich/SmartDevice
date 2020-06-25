@@ -1,5 +1,3 @@
-'use strict';
-
 var scrollBtn = document.querySelector('.promo__link');
 var formBtn = document.querySelectorAll('.promo__button');
 var advantagesNode = document.querySelector('.advantages');
