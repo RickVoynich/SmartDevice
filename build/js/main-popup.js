@@ -1,6 +1,3 @@
-
-'use strict';
-
 var ESC_KEYCODE = 27;
 
 var link = document.querySelector('.contacts__btn');
