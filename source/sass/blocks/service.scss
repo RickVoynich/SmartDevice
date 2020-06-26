@@ -4,7 +4,7 @@
 }
 
 .service__wrap {
-  width: 64%;
+  width: 95%;
   max-width: 1200px;
   min-width: 960px;
   margin: 30px auto 0;
@@ -92,7 +92,9 @@
   font-size: 20px;
   line-height: 30px;
   color: $white;
-  width: 160px;
+  width: 193px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .service__link:hover {
