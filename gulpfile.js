@@ -16,6 +16,8 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
+
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -83,12 +85,14 @@ gulp.task("html", function () {
 gulp.task("concat-js-vendor", function () {
   return gulp.src("source/js/vendor-*.js")
     .pipe(concat("vendor.js"))
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("concat-js-main", function () {
   return gulp.src("source/js/main-*.js")
     .pipe(concat("main.js"))
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 
@@ -96,7 +100,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source//*.ico"
   ], {
     base: "source"
