@@ -240,11 +240,11 @@
           <form class="form__content form-template" action="https://echo.htmlacademy.ru" method="post">
             <label>
               <span class="visually-hidden">Ваше имя</span>
-              <input type="text" name="name" placeholder="Имя">
+              <input type="text" name="name" placeholder="Имя" required>
             </label>
             <label>
               <span class="visually-hidden">Ваш телефон</span>
-              <input type="tel" name="phone" placeholder="Телефон">
+              <input type="tel" name="phone" placeholder="Телефон" required>
             </label>
             <label>
               <span class="visually-hidden">Ваш вопрос</span>
@@ -357,8 +357,7 @@
         </label>
         <label>
           <span class="visually-hidden">Ваше имя</span>
-          <textarea name="question" id="popup-question" placeholder="Ваш вопрос" cols="30" rows="10"
-            required></textarea>
+          <textarea name="question" id="popup-question" placeholder="Ваш вопрос" cols="30" rows="10"></textarea>
         </label>
         <button class="button" type="submit">Отправить</button>
         <div class="popup__agreement form-template__agreement">
