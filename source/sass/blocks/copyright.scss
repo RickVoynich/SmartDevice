@@ -30,8 +30,10 @@
   flex-grow: 1;
 }
 
-.copyright__link {
-  flex-grow: 2.9;
+.copyright__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2.8;
 }
 
 .copyright__link:hover,
@@ -42,17 +44,13 @@
 @include tablet-width {
   .copyright {
     width: 100%;
-    min-width: 721px;
-    padding: 24px 17px;
+    min-width: 720px;
+    padding: 24px 25px;
   }
 
   .copyright__statement,
   .copyright__years {
     display: none;
-  }
-
-  .copyright__link {
-    flex-grow: 0;
   }
 }
 
@@ -68,6 +66,11 @@
   .copyright__statement,
   .copyright__years {
     display: none;
+  }
+
+  .copyright__wrap {
+    flex-direction: column;
+    align-items: center;
   }
 
   .copyright__link {

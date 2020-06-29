@@ -104,7 +104,6 @@
 
 @include tablet-width {
   .service__wrap {
-    width: 93.75%;
     min-width: 770px;
     margin: 0;
     padding-bottom: 32px;
@@ -121,14 +120,13 @@
 
   .service__list {
     flex-direction: column;
-    width: 96%;
     margin: 0 25px;
   }
 
   .service__item {
     margin-bottom: 45px;
     margin-right: 0;
-    width: 97%;
+    width: 100%;
     min-height: 256px;
   }
 
@@ -148,7 +146,6 @@
   }
 
   .service__wrap {
-    width: 90.6%;
     min-width: 320px;
     padding-bottom: 35px;
     padding-top: 31px;
@@ -163,12 +160,10 @@
   }
 
   .service__list {
-    width: 98%;
     margin: 0 15px;
   }
 
   .service__item {
-    width: 93%;
     margin-bottom: 30px;
     margin-right: 0;
     min-height: 256px;

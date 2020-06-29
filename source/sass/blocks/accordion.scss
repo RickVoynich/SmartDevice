@@ -23,6 +23,10 @@
       position: absolute;
       content: "";
     }
+
+    &::after {
+      transform: rotate(180deg);
+    }
   }
 
   .accordion-btn--on {
@@ -31,11 +35,11 @@
     }
   }
 
-  .accordion-btn--on + .menu__nav {
+  .accordion-btn--on+.menu__nav {
     display: flex;
   }
 
-  .accordion-btn--on + .contact__content {
+  .accordion-btn--on+.contact__content {
     display: flex;
   }
 }

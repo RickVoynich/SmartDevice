@@ -48,7 +48,6 @@
   .contact {
     width: 365px;
     padding-top: 38px;
-    padding-left: 7px;
   }
 }
 
@@ -59,8 +58,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 94%;
-    padding: 30px 5% 28px;
+    width: 100%;
+    padding: 30px 5% 24px 5%;
   }
 
   .contact__title {

@@ -98,7 +98,7 @@
   .form__wrap {
     width: 76.82%;
     padding-top: 54px;
-    padding-bottom: 109px;
+    padding-bottom: 105px;
     min-width: 750px;
   }
 
@@ -133,7 +133,7 @@
 
     textarea {
       height: 160px;
-      margin-bottom: 42px;
+      margin-bottom: 46px;
       width: 100%;
       min-width: 590px;
     }
@@ -141,6 +141,10 @@
 
   .form__agreement {
     padding-left: 13px;
+
+    span {
+      width: 17px;
+    }
   }
 }
 
@@ -183,13 +187,13 @@
 
     textarea {
       height: 104px;
-      margin-bottom: 27px;
+      margin-bottom: 31px;
       min-width: 280px;
     }
 
     button {
       margin-bottom: 28px;
-      width: 92.6%;
+      width: 90%;
     }
   }
 
