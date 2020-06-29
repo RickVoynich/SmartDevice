@@ -1,6 +1,6 @@
 var ESC_KEYCODE = 27;
 
-var link = document.querySelector('.contacts__btn');
+var link = document.querySelector('.header__btn');
 var popup = document.querySelector('.popup');
 var close = popup.querySelector('.popup__close-btn');
 

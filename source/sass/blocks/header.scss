@@ -40,6 +40,17 @@
   justify-content: flex-end;
 }
 
+.header__btn {
+  background-color: transparent;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 5px;
+  min-width: 180px;
+  padding: 14px 0 13px;
+  margin: 10px;
+  margin-right: 0;
+}
+
 @include tablet-width {
   .header {
     margin: 0 auto;
@@ -56,6 +67,10 @@
 
   .header__contacts {
     padding-top: 10px;
+  }
+
+  .header__btn {
+    display: none;
   }
 }
 
