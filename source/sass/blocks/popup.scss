@@ -1,4 +1,4 @@
-.feedback__popup {
+.popup {
   display: none;
   position: fixed;
   top: 0;
@@ -11,11 +11,11 @@
   animation: fade-in 0.6s ease;
 }
 
-.feedback__popup--opened {
+.popup--opened {
   display: block;
 }
 
-.feedback__content {
+.popup__content {
   position: relative;
   top: 20%;
   left: 50%;
@@ -27,7 +27,7 @@
   background-color: $lightblue;
 }
 
-.feedback__title {
+.popup__title {
   display: block;
   margin-bottom: 12px;
   font-family: $roboto-condensed;
@@ -37,7 +37,7 @@
   font-weight: 400;
 }
 
-.feedback__description {
+.popup__description {
   width: 400px;
   margin: 0 0 30px;
   color: $white;
@@ -45,8 +45,7 @@
   line-height: 22px;
 }
 
-.feedback__form {
-
+.popup__form {
   input,
   textarea,
   button {
@@ -78,7 +77,7 @@
   }
 }
 
-.feedback__agreement {
+.popup__agreement {
   label {
     padding-left: 49px;
     width: 400px;
@@ -97,7 +96,7 @@
   }
 }
 
-.feedback__close-btn {
+.popup__close-btn {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -111,8 +110,8 @@
   @include hover;
 }
 
-.feedback__close-btn::after,
-.feedback__close-btn::before {
+.popup__close-btn::after,
+.popup__close-btn::before {
   top: 9px;
   left: -1px;
   background-color: $white;
@@ -123,10 +122,10 @@
   content: "";
 }
 
-.feedback__close-btn::before {
+.popup__close-btn::before {
   transform: rotate(45deg);
 }
 
-.feedback__close-btn::after {
+.popup__close-btn::after {
   transform: rotate(-45deg);
 }

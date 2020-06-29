@@ -1,23 +1,23 @@
 var ESC_KEYCODE = 27;
 
 var link = document.querySelector('.contacts__btn');
-var popup = document.querySelector('.feedback__popup');
-var close = popup.querySelector('.feedback__close-btn');
+var popup = document.querySelector('.popup');
+var close = popup.querySelector('.popup__close-btn');
 
-var form = popup.querySelector('.feedback__content form');
-var feedbackName = form.querySelector('#feedback-name');
-var phone = form.querySelector('#feedback-phone');
-var question = form.querySelector('#feedback-question');
+var form = popup.querySelector('.popup__content form');
+var popupName = form.querySelector('#popup-name');
+var phone = form.querySelector('#popup-phone');
+var question = form.querySelector('#popup-question');
 
 var isStorageSupport = true;
 var storage = {
-  feedbackName: '',
+  popupName: '',
   phone: '',
   question: ''
 };
 
 try {
-  storage.feedbackName = localStorage.getItem('feedbackName');
+  storage.popupName = localStorage.getItem('popupName');
   storage.phone = localStorage.getItem('phone');
   storage.question = localStorage.getItem('question');
 } catch (err) {
@@ -35,7 +35,7 @@ if (link && popup) {
   if (form) {
     form.addEventListener('submit', function () {
       if (isStorageSupport) {
-        localStorage.setItem('feedbackName', feedbackName.value);
+        localStorage.setItem('popupName', popupName.value);
         localStorage.setItem('phone', phone.value);
         localStorage.setItem('question', question.value);
       }
@@ -43,8 +43,8 @@ if (link && popup) {
   }
 
   var checkLocalStorage = function () {
-    if (feedbackName && storage.feedbackName !== null) {
-      feedbackName.value = storage.feedbackName;
+    if (popupName && storage.popupName !== null) {
+      popupName.value = storage.popupName;
     }
 
     if (phone && storage.phone !== null) {
@@ -57,15 +57,15 @@ if (link && popup) {
   };
 
   var openPopup = function () {
-    popup.classList.add('feedback__popup--opened');
+    popup.classList.add('popup--opened');
     document.body.classList.add('disable-scroll');
     document.addEventListener('keydown', onPopupEscPress);
     checkLocalStorage();
-    feedbackName.focus();
+    popupName.focus();
   };
 
   var closePopup = function () {
-    popup.classList.remove('feedback__popup--opened');
+    popup.classList.remove('popup--opened');
     document.body.classList.remove('disable-scroll');
     document.removeEventListener('keydown', onPopupEscPress);
   };

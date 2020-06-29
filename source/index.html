@@ -341,27 +341,27 @@
     </section>
   </footer>
 
-  <section class="feedback__popup">
+  <section class="popup">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <div class="feedback__content">
-      <b class="feedback__title">Закажите звонок</b>
-      <p class="feedback__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form class="feedback__form form-template" action="https://echo.htmlacademy.ru" method="POST">
+    <div class="popup__content">
+      <b class="popup__title">Закажите звонок</b>
+      <p class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="popup__form form-template" action="https://echo.htmlacademy.ru" method="POST">
         <label>
           <span class="visually-hidden">Ваше имя</span>
-          <input type="text" name="name" id="feedback-name" placeholder="Имя" required>
+          <input type="text" name="name" id="popup-name" placeholder="Имя" required>
         </label>
         <label>
           <span class="visually-hidden">Ваше имя</span>
-          <input type="tel" name="phone" id="feedback-phone" placeholder="Телефон" required>
+          <input type="tel" name="phone" id="popup-phone" placeholder="Телефон" required>
         </label>
         <label>
           <span class="visually-hidden">Ваше имя</span>
-          <textarea name="question" id="feedback-question" placeholder="Ваш вопрос" cols="30" rows="10"
+          <textarea name="question" id="popup-question" placeholder="Ваш вопрос" cols="30" rows="10"
             required></textarea>
         </label>
         <button class="button" type="submit">Отправить</button>
-        <div class="feedback__agreement form-template__agreement">
+        <div class="popup__agreement form-template__agreement">
           <label>
             <input class="visually-hidden" type="checkbox" name="agreement" checked required>
             <span></span>
@@ -369,7 +369,7 @@
           </label>
         </div>
       </form>
-      <button class="feedback__close-btn" type="button" aria-label="Закрыть окно"></button>
+      <button class="popup__close-btn" type="button" aria-label="Закрыть окно"></button>
     </div>
   </section>
   <script src="js/vendor.js"></script>
